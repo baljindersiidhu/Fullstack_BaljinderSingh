@@ -1,0 +1,325 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+--colorDark1:#112D4E;
+--colorDark2: #3F72AF;
+--colorLight1:#DBE2EF;
+--colorLight2:#F9F7F7;
+}
+
+.wrapper{
+    width: 100vw;
+    height:1500px;
+    max-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    background-image: linear-gradient(160deg,#112d4e 0%,#3f72af 100%);
+}
+
+h1{
+    color: white;
+    text-align: center;
+    padding: 40px;
+
+}
+
+.tab-container{
+    display: flex;
+    margin: 0 auto;
+     color: white;
+     justify-content: space-between;
+    margin-top: 40px;
+     width: 600px;
+     max-width: 550px;
+
+}
+.tab{
+    cursor: pointer;
+    font-size: .875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+  
+}
+
+.tab.current-tab{
+    background-color:rgba(219, 226, 239, .5) ;
+    border-radius: 4px;
+}
+
+.weather-container{
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn{
+    all: unset;
+    padding: 10px 30px;
+    color: white;
+    background-color: #3f72af;
+    text-transform: uppercase;
+    border-radius: 10px ;
+    cursor: pointer;
+
+}
+
+.sub-conainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.grant-location-container{
+ display: none;
+}
+
+.grant-location-container.active{
+    display: flex;
+}
+.grant-location-container img{
+    margin-top: 2rem;
+ margin-bottom: 2rem;
+}
+.grant-location-container p:first-of-type{
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+.grant-location-container p:last-of-type{
+    color: white;
+    font-size: .95rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .75px;
+    margin-top: 7px;
+    margin-bottom: 1.75rem;
+}
+
+.loading-container{
+display: none;
+}
+
+.loading-container.active{
+    display: flex;
+}
+.loading-container p{
+    text-transform: uppercase;
+    color: white;
+}
+
+.user-info-container.active{
+    display: flex;
+}
+.user-info-container{
+    display: none;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+     gap: 0 .5rem;
+    margin-bottom: 1rem;
+}
+
+.name p{
+    color: white;
+    font-size: 2rem;
+    text-transform: capitalize;
+
+}
+.name img{
+   align-self: center;
+    width: 30px;
+    height: 20px;
+}
+
+.user-info-container p{
+    color: white;
+    opacity: 90%;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+.user-info-container .desc-img{
+    width: 100px;
+    height: 100px;
+}
+
+.user-info-container p[data-temp]{
+    font-size:2.75rem ;
+}
+
+.parameter-container{
+    display: flex;
+    gap: 10px 20px;
+    align-items: center; 
+    margin-top: 2rem;
+     
+}
+
+.parameter{
+align-items: center; 
+width: 120px;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+border-radius: 5px;
+background-color: rgba(219,226,239,.5);
+padding-bottom: 20px;
+}
+
+.form-container .btn{
+    padding: 5px;
+    border-radius: 50px;
+}
+.form-container input{
+   color: rgba(219,226,239,.7);
+}
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+     margin-top: 3rem;
+     gap: 10px;
+}
+.form-container.active{
+    display: flex;
+}
+.form-container input{
+   all: unset;
+    width: 90%;
+    height: 40px;
+    padding: 0 28px;
+   background-color: rgba(219,226,239,.5);
+   border-radius: 10px;
+   
+}
+
+.form-container input::placeholder{
+    color: rgba(219,226,239,.7);
+    
+    
+    
+}
+
+.form-container input{
+    color: rgba(219,226,239,1);
+}
+.form-container input:focus{
+    outline: 3px solid rgba(255,255,255,.7);
+}
+
+
+.error-img{
+    display: none;
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+}
+
+.error-img.active{
+    display: flex;
+    
+}
+
+/* Tablet */
+@media (max-width:1024px){
+.tab-container{
+    width:90% ;
+}
+.parameter-container{
+    flex-wrap: wrap;
+    justify-content:center ;
+}
+}
+
+/* Mobile */
+@media (max-width:768px){
+    .tab-container{
+        width: 90%;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .weather-container{
+        width: 90%;
+    }
+     .parameter-container{
+        flex-direction: column;
+        gap: 15px;
+    }
+   .name p{
+        font-size: 1.5rem;
+    }
+     .parameter{
+        width: 80%;
+    }
+
+    .sub-conainer p[data-temp]{
+        font-size: 1.5rem;
+    }
+    .error-img img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+   
+    
+}
+
+/* Small mobile */
+@media (max-width: 480px){
+
+    h1{
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+
+    .parameter{
+        width: 100%;
+    }
+
+    .form-container input{
+        padding: 0 15px;
+    }
+    .error-img{
+        width: 200px;
+        height: 200px;
+    }
+
+}
